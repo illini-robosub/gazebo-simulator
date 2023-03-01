@@ -94,7 +94,7 @@
     </plugin>
 
     <link name="thruster1">
-      <pose>0.1681226 -0.2388489 0 -1.5707963267948966 1.5707963267948966 2.09439510239</pose>
+      <pose>0.15 -0.09 0 -1.5707963267948966 0 -0.7853981633974483</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
@@ -131,7 +131,7 @@
     </link>
 
     <link name="thruster2">
-      <pose>0.1681226 0.2388489 0 -1.5707963267948966 1.5707963267948966 1.0471975512</pose>
+      <pose>0.15 0.09 0 -1.5707963267948966 1.5707963267948966 -2.356194490192345</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
@@ -168,7 +168,7 @@
     </link>
 
     <link name="thruster3">
-      <pose>-0.1681226 -0.2388489 0 -1.5707963267948966 1.5707963267948966 -2.09439510239</pose>
+      <pose>-0.15 -0.09 0 -1.5707963267948966 1.5707963267948966 0.7853981633974483</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
@@ -205,7 +205,7 @@
     </link>
 
     <link name="thruster4">
-      <pose>-0.1681226 0.2388489 0 -1.5707963267948966 1.5707963267948966 -1.0471975512</pose>
+      <pose>-0.15 0.09 0 -1.5707963267948966 1.5707963267948966 2.356194490192345</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
@@ -242,7 +242,7 @@
     </link>
 
     <link name="thruster5">
-      <pose>0 -0.105 0.09 0 1.57079632679 0</pose>
+      <pose>0 -0.105 0.09 0 0 0</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
@@ -279,7 +279,7 @@
     </link>
 
     <link name="thruster6">
-      <pose>0 0.105 0.09 0 1.57079632679 0</pose>
+      <pose>0 0.105 0.09 0 0 0</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
