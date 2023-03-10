@@ -94,7 +94,7 @@
     </plugin>
 
     <link name="thruster1">
-      <pose>0.1681226 -0.2388489 0 -1.5707963267948966 1.5707963267948966 2.09439510239</pose>
+      <pose>0.15 -0.09 0 -1.5707963267948966 1.5707963267948966 -0.7853981633974483</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
@@ -131,7 +131,7 @@
     </link>
 
     <link name="thruster2">
-      <pose>0.1681226 0.2388489 0 -1.5707963267948966 1.5707963267948966 1.0471975512</pose>
+      <pose>0.15 0.09 0 -1.5707963267948966 1.5707963267948966 -2.356194490192345</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
@@ -168,7 +168,7 @@
     </link>
 
     <link name="thruster3">
-      <pose>-0.1681226 -0.2388489 0 -1.5707963267948966 1.5707963267948966 -2.09439510239</pose>
+      <pose>-0.15 -0.09 0 -1.5707963267948966 1.5707963267948966 0.7853981633974483</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
@@ -205,7 +205,7 @@
     </link>
 
     <link name="thruster4">
-      <pose>-0.1681226 0.2388489 0 -1.5707963267948966 1.5707963267948966 -1.0471975512</pose>
+      <pose>-0.15 0.09 0 -1.5707963267948966 1.5707963267948966 2.356194490192345</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
@@ -242,7 +242,7 @@
     </link>
 
     <link name="thruster5">
-      <pose>0.1900047 0 0.1905 0 0 0</pose>
+      <pose>0.1 -0.105 0.09 0 0 0</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
@@ -279,7 +279,81 @@
     </link>
 
     <link name="thruster6">
-      <pose>-0.1900047 0 0.1905 0 0 0</pose>
+      <pose>0.1 0.105 0.09 0 0 0</pose>
+      <visual name="thruster_front">
+        <pose>0 0 0.005 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.02 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <emissive>0 0 1 0</emissive>
+        </material>
+      </visual>
+      <visual name="thruster_back">
+        <pose>0 0 -0.005 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.02 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <emissive>1 0 0 0</emissive>
+        </material>
+      </visual>
+      <inertial>
+        <mass>0.002</mass>
+        <inertia>
+          <ixx>0.001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.001</iyy>
+          <iyz>0</iyz>
+          <izz>0.001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+     <link name="thruster7">
+      <pose>-0.1 -0.105 0.09 0 0 0</pose>
+      <visual name="thruster_front">
+        <pose>0 0 0.005 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.02 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <emissive>0 0 1 0</emissive>
+        </material>
+      </visual>
+      <visual name="thruster_back">
+        <pose>0 0 -0.005 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.02 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <emissive>1 0 0 0</emissive>
+        </material>
+      </visual>
+      <inertial>
+        <mass>0.002</mass>
+        <inertia>
+          <ixx>0.001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.001</iyy>
+          <iyz>0</iyz>
+          <izz>0.001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+     <link name="thruster8">
+      <pose>-0.1 0.105 0.09 0 0 0</pose>
       <visual name="thruster_front">
         <pose>0 0 0.005 0 0 0</pose>
         <geometry>
@@ -362,6 +436,22 @@
         <xyz>0 0 -1</xyz>
       </axis>
     </joint>
+    
+    <joint name="thruster7_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>thruster7</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+      </axis>
+    </joint>
+    
+    <joint name="thruster8_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>thruster8</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+      </axis>
+    </joint>
 
     <plugin
         filename="gz-sim-thruster-system"
@@ -432,6 +522,29 @@
       <joint_name>thruster6_joint</joint_name>
       <!-- Reverse spin to balance torque -->
       <thrust_coefficient>-0.02</thrust_coefficient>
+      <fluid_density>1000</fluid_density>
+      <propeller_diameter>0.1</propeller_diameter>
+      <velocity_control>true</velocity_control>
+      <use_angvel_cmd>False</use_angvel_cmd>
+    </plugin>
+    <plugin
+        filename="gz-sim-thruster-system"
+        name="gz::sim::systems::Thruster">
+      <namespace>orca4</namespace>
+      <joint_name>thruster7_joint</joint_name>
+      <!-- Reverse spin to balance torque -->
+      <thrust_coefficient>-0.02</thrust_coefficient>
+      <fluid_density>1000</fluid_density>
+      <propeller_diameter>0.1</propeller_diameter>
+      <velocity_control>true</velocity_control>
+      <use_angvel_cmd>False</use_angvel_cmd>
+    </plugin>
+    <plugin
+        filename="gz-sim-thruster-system"
+        name="gz::sim::systems::Thruster">
+      <namespace>orca4</namespace>
+      <joint_name>thruster8_joint</joint_name>
+      <thrust_coefficient>0.02</thrust_coefficient>
       <fluid_density>1000</fluid_density>
       <propeller_diameter>0.1</propeller_diameter>
       <velocity_control>true</velocity_control>
@@ -511,6 +624,25 @@
         <offset>-0.5</offset>
         <multiplier>100</multiplier>
       </control>
+      <control channel="6">
+        <jointName>thruster7_joint</jointName>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <type>COMMAND</type>
+        <cmd_topic>/model/orca4/joint/thruster7_joint/cmd_thrust</cmd_topic>
+        <offset>-0.5</offset>
+        <multiplier>100</multiplier>
+      </control>
+      <control channel="7">
+        <jointName>thruster8_joint</jointName>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <type>COMMAND</type>
+        <cmd_topic>/model/orca4/joint/thruster8_joint/cmd_thrust</cmd_topic>
+        <offset>-0.5</offset>
+        <multiplier>100</multiplier>
+      </control>
+
 
     </plugin>
 
