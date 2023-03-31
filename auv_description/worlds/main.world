@@ -51,6 +51,12 @@
      <uri>model://baseplate</uri>
      <pose>0 7 -5 0 0 0</pose>
     </include>
+    
+    <include>
+     <uri>model://marker</uri>
+     <pose>13 0 -2.5 0 0 0</pose>
+    </include>
+
 
     <include>
       <uri>model://orca4</uri>

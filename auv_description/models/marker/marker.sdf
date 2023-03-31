@@ -12,13 +12,15 @@
         </inertial>
       <visual name='marker_vis'>
         <geometry>
-          <sphere><radius>0.02</radius></sphere>
+          <cylinder>
+            <radius>0.1</radius>
+            <length>5</length>
+          </cylinder>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
       <collision name='marker_collision'>
@@ -27,12 +29,5 @@
         </geometry>
       </collision>
     </link>
-    <plugin name="buoyancy_improved" filename="libbuoyancy_improved.so">
-      <fluid_density>1000</fluid_density>
-      <link name="marker">
-        <volume>0.00003351</volume>
-      </link>
-    </plugin>
-
   </model>
 </sdf>
