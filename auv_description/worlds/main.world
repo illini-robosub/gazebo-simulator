@@ -49,12 +49,17 @@
 
     <include>
      <uri>model://baseplate</uri>
-     <pose>0 7 -5 0 0 0</pose>
+     <pose>0 7 -3 0 0 0</pose>
     </include>
     
     <include>
      <uri>model://marker</uri>
      <pose>13 0 -2.5 0 0 0</pose>
+    </include>
+
+    <include>
+     <uri>model://gate</uri>
+     <pose>3 0 -1.5 0 0 1.57</pose>
     </include>
 
 
