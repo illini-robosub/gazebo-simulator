@@ -4,7 +4,7 @@
   <model name='gate'>
     <pose>0 0 0 0 0 0</pose>
     <self_collide> 0 </self_collide>
-    <static> 1</static>
+    <static>1</static>
 
     <link name='gate_top'>
       <pose>0 0 0 0 1.5707 0</pose>
@@ -16,10 +16,9 @@
           </cylinder>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/FlatBlack</name>
-          </script>
+            <ambient>1.0 0.0 0.0 1</ambient>
+            <diffuse>1.0 0.0 0.0 1</diffuse>
+            <specular>1.0 0.0 0.0 1</specular>
         </material>
       </visual>
       <collision name='gate_top_collide'>
@@ -42,11 +41,9 @@
           </cylinder>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Orange</name>
-          </script>
-          <diffuse>0.6 0.3088 0.0468 1</diffuse>
+            <ambient>1.0 0.0 0.0 1</ambient>
+            <diffuse>1.0 0.0 0.0 1</diffuse>
+            <specular>1.0 0.0 0.0 1</specular>
         </material>
       </visual>
       <visual name='gate_right_top'>
@@ -58,10 +55,9 @@
           </cylinder>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/FlatBlack</name>
-          </script>
+          <ambient>1.0 0.0 0.0 1</ambient>
+            <diffuse>1.0 0.0 0.0 1</diffuse>
+            <specular>1.0 0.0 0.0 1</specular>
         </material>
       </visual>
       <visual name='gate_right_bottom'>
@@ -73,10 +69,9 @@
           </cylinder>
         </geometry>
         <material>
-          <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/FlatBlack</name>
-          </script>
+          <ambient>1.0 0.0 0.0 1</ambient>
+            <diffuse>1.0 0.0 0.0 1</diffuse>
+            <specular>1.0 0.0 0.0 1</specular>
         </material>
       </visual>
       <collision name='gate_right_collide'>
@@ -99,11 +94,9 @@
           </cylinder>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Orange</name>
-          </script>
-          <diffuse>0.6 0.3088 0.0468 1</diffuse>
+          <ambient>1.0 0.0 0.0 1</ambient>
+          <diffuse>1.0 0.0 0.0 1</diffuse>
+          <specular>1.0 0.0 0.0 1</specular>
         </material>
       </visual>
       <visual name='gate_left_top'>
@@ -115,10 +108,9 @@
           </cylinder>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/FlatBlack</name>
-          </script>
+          <ambient>1.0 0.0 0.0 1</ambient>
+          <diffuse>1.0 0.0 0.0 1</diffuse>
+          <specular>1.0 0.0 0.0 1</specular>
         </material>
       </visual>
       <visual name='gate_left_bottom'>
@@ -130,10 +122,9 @@
           </cylinder>
         </geometry>
         <material>
-          <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/FlatBlack</name>
-          </script>
+          <ambient>1.0 0.0 0.0 1</ambient>
+          <diffuse>1.0 0.0 0.0 1</diffuse>
+          <specular>1.0 0.0 0.0 1</specular>
         </material>
       </visual>
       <collision name='gate_left_collide'>
