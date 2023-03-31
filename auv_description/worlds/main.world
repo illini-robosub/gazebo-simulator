@@ -49,7 +49,7 @@
 
     <include>
      <uri>model://baseplate</uri>
-     <pose>0 7 -10 0 0 0</pose>
+     <pose>0 7 -5 0 0 0</pose>
     </include>
 
     <include>
