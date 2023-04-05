@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <sdf version="1.6">
-  <model name="orca4">
+  <model name="auv">
     <pose>0 0 0 0 0 0</pose>
 
     <!-- BlueROV2 thruster reference: http://www.ardusub.com/introduction/features.html -->
